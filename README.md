@@ -81,15 +81,18 @@ clone llama.cpp
 Reference: https://github.com/ggerganov/llama.cpp  
 Compile llama.cpp with nvidia support  
 
-`make LLAMA_CUDA=1`
+``` bash
+export PATH=$PATH:/usr/local/cuda-12.5/bin
+make LLAMA_CUDA=1
+```
 
 ### Load the models
 Download Mixtral GGUF quant  
-https://huggingface.co/TheBloke/Mixtral-8x7B-v0.1-GGUF/resolve/main/mixtral-8x7b-v0.1.Q5_K_M.gguf?download=true  
+https://huggingface.co/TheBloke/Mixtral-8x7B-v0.1-GGUF/resolve/main/mixtral-8x7b-v0.1.Q4_K_M.gguf?download=true  
 Reference: https://huggingface.co/TheBloke/Mixtral-8x7B-v0.1-GGUF/tree/main  
 
 Download Dolphin Starcoder2 quant:  
-https://huggingface.co/bartowski/dolphincoder-starcoder2-15b-GGUF/resolve/main/dolphincoder-starcoder2-15b-Q4_K_M.gguf?download=true  
+https://huggingface.co/bartowski/dolphincoder-starcoder2-15b-GGUF/resolve/main/dolphincoder-starcoder2-15b-Q3_K_M.gguf?download=true  
 reference: https://huggingface.co/bartowski/dolphincoder-starcoder2-15b-GGUF  
 
 Place the models into the llama cpp models folder
@@ -98,18 +101,18 @@ Place the models into the llama cpp models folder
 
 Start the Instruct Server
 
-`./server -m models/mixtral-8x7b-instruct-v0.1.Q5_K_M.gguf -ngl 33`
+`./server -m models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf -ngl 99`
 
-CUDA VRAM Usage: 31GB
+CUDA VRAM Usage: 34GB
 
 Start the Autocomplete Server
 
-`./server --port 8081 -m models/dolphincoder-starcoder2-15b-Q4_K_M.gguf -ngl 41`
+`./server --port 8081 -m models/dolphincoder-starcoder2-15b-Q3_K_M.gguf -ngl 99`
 
-CUDA VRAM Usage:10GB
+CUDA VRAM Usage:13GB
 
 
-TOTAL VRAM Usage: 41GB / 48GB
+TOTAL VRAM Usage: 47GB / 48GB
 
 ### Configure VScode
 
