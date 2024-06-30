@@ -101,13 +101,13 @@ Place the models into the llama cpp models folder
 
 Start the Instruct Server
 
-`./server -m models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf -ngl 99`
+`./llama-server -m models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf -ngl 99`
 
 CUDA VRAM Usage: 34GB
 
 Start the Autocomplete Server
 
-`./server --port 8081 -m models/dolphincoder-starcoder2-15b-Q3_K_M.gguf -ngl 99`
+`./llama-server --port 8081 -m models/dolphincoder-starcoder2-15b-Q3_K_M.gguf -ngl 99`
 
 CUDA VRAM Usage:13GB
 
