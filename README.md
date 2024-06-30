@@ -87,13 +87,25 @@ make LLAMA_CUDA=1
 ```
 
 ### Load the models
-Download Mixtral GGUF quant  
-https://huggingface.co/TheBloke/Mixtral-8x7B-v0.1-GGUF/resolve/main/mixtral-8x7b-v0.1.Q4_K_M.gguf?download=true  
+
+### Balanced models for closed source development
+Download Mixtral 8x7B Instruct GGUF quant  
+https://huggingface.co/bartowski/Codestral-22B-v0.1-GGUF/resolve/main/Codestral-22B-v0.1-Q6_K.gguf
 Reference: https://huggingface.co/TheBloke/Mixtral-8x7B-v0.1-GGUF/tree/main  
 
-Download Dolphin Starcoder2 quant:  
+Download Dolphin Starcoder2 15B quant:  
 https://huggingface.co/bartowski/dolphincoder-starcoder2-15b-GGUF/resolve/main/dolphincoder-starcoder2-15b-Q3_K_M.gguf?download=true  
 reference: https://huggingface.co/bartowski/dolphincoder-starcoder2-15b-GGUF  
+
+### Restricted License models for open source development, bias towards autocomplete
+Download Codestral 22B GGUF quant  
+https://huggingface.co/bartowski/Codestral-22B-v0.1-GGUF/resolve/main/Codestral-22B-v0.1-Q6_K.gguf
+Reference: https://huggingface.co/bartowski/Codestral-22B-v0.1-GGUF 
+
+Download Mistral Instruct 7B quant:  
+https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/blob/main/mistral-7b-instruct-v0.2.Q6_K.gguf
+reference: https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF
+
 
 Place the models into the llama cpp models folder
 
