@@ -2,7 +2,7 @@ Dual 3090 AI Inference Workstation
 
 ## Videos
 
-- TBD
+- DUAL 3090 AI Inference Workstation - https://www.youtube.com/watch?v=3sdmkrcmZw0
 
 ## Hardware
 
@@ -105,15 +105,11 @@ Start the Instruct Server
 
 `./llama-server --port 8080 -m models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf -ngl 99`
 
-CUDA VRAM Usage: 34GB
 
 Start the Autocomplete Server
 
-`./llama-server --port 8081 -m models/dolphincoder-starcoder2-15b-Q3_K_M.gguf -ngl 99`
+`./llama-server --port 8081 -m models/dolphincoder-starcoder2-7b-Q6_K.gguf -ngl 99`
 
-CUDA VRAM Usage: 13GB
-
-TOTAL VRAM Usage: 47GB / 48GB
 
 ### Configure VScode
 
@@ -148,7 +144,7 @@ Reference: https://docs.continue.dev/reference/Model%20Providers/llamacpp
   "tabAutocompleteModel": {
     "title": "Dolphin Starcoder2",
     "provider": "llama.cpp",
-    "model": "starcoder2:15b",
+    "model": "starcoder2:7b",
     "apiBase": "http://localhost:8081",
     "useCopyBuffer": false,
     "maxPromptTokens": 4000,
